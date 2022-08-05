@@ -8,13 +8,13 @@
 - 如果出錯則print error代表錯誤
 ## 程式限制規範說明
 ### 程式路徑限制
--主程式務必命名為 main.py
--程式配置路徑請放在/usr/src/app/ 之下,以便容器化佈署之後方便抓取
+- 主程式務必命名為 main.py
+- 程式配置路徑請放在/usr/src/app/ 之下,以便容器化佈署之後方便抓取
 
 ### 輸入與輸出的檔案皆需要依照指定路徑放置
-輸入資料夾命名
+#### 輸入資料夾命名
     /usr/src/app/input/{GUID}/
-輸出資料夾命名
+#### 輸出資料夾命名
     /usr/src/app/output/{GUID}/
 
     EX: 
@@ -24,7 +24,7 @@
     則輸出檔案路徑則為:
     /usr/src/app/output/abcd-0000-0000-0001/
 
-輸入檔案命名
+#### 輸入檔案命名
 	/{輸入檔案資料夾}/input{編號}.{副檔名}
 	注意!資料夾內可能會有多個輸入輸出檔案,是代表每次處理的需要多個參數
     假設輸入檔有3個檔案,是代表每次辨識需要輸入三個檔案
@@ -33,7 +33,7 @@
     /usr/src/app/input/abcd-0000-0000-0001/input1.txt
     /usr/src/app/input/abcd-0000-0000-0001/input2.png
     /usr/src/app/input/abcd-0000-0000-0001/input3.txt
-輸出檔案命名	
+#### 輸出檔案命名	
 	/{輸出檔案資料夾}/output{編號}.{副檔名}
 	輸出範例
 	/usr/src/app/output/abcd-0000-0000-0001/output1.txt

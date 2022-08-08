@@ -70,3 +70,14 @@
 	/usr/src/app/output/abcd-0000-0000-0001/output2.txt
 	/usr/src/app/output/abcd-0000-0000-0001/output3.txt
 	/usr/src/app/output/abcd-0000-0000-0001/output4.txt
+
+
+### Container封裝說明
+	因為自動化佈署需要,ReposityName與TagName需要命名在匯出檔案上
+	且dockerhub帳號的部分需要固定使用iscom70598966
+#### 封裝指令
+	格式 sudo docker build . -t iscom70598966/{ReposityName}:{TagName}
+	範例 sudo docker build . -t iscom70598966/allentest:v1
+#### 匯出封裝檔案
+	格式 sudo docker save -o iscom70598966_{ReposityName}_{TagName} iscom70598966/{ReposityName}:{TagName}
+	範例 sudo docker save -o iscom70598966_allentest_v1 iscom70598966/allentest:v1

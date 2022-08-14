@@ -9,12 +9,12 @@ import demo
 
 
 # 絕對路徑版本,佈署到容器化環境之後需要使用以下路徑
-DATA_PATH = '/usr/src/app/input'
-PROCESSED_DIR = '/usr/src/app/output'
+# DATA_PATH = '/usr/src/app/input'
+# PROCESSED_DIR = '/usr/src/app/output'
 
 # 相對路徑版本,建議開發使用
-#DATA_PATH = './input'
-#PROCESSED_DIR = './output'
+DATA_PATH = './input'
+PROCESSED_DIR = './output'
 
 
 def Main():

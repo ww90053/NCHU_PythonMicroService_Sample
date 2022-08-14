@@ -1,5 +1,6 @@
 import os
 import time
+import shutil
 
 #以下範例示範如何將程式
 
@@ -30,36 +31,14 @@ def exec(inputFileDirPath,outFileDirPath):
 	#這邊關鍵在於要將檔案放置到輸出資料夾,並依照檔案命名
 	# 檔名路徑格式: {輸出檔案資料夾}/output{編號}.{副檔名}
 	# EX:
-	#   /usr/src/app/output/abcd-0000-0000-0001/output1.txt
-	#   /usr/src/app/output/abcd-0000-0000-0001/output2.txt
-	#   /usr/src/app/output/abcd-0000-0000-0001/output3.txt
-	#   /usr/src/app/output/abcd-0000-0000-0001/output4.txt
-	
-	#拼接 輸出檔案路徑 1
-	outputFilePath = os.path.join(outFileDirPath, 'output1.txt')
-	#寫檔
-	WriteFile(outputFilePath,'輸出測試')
-	
-	#拼接 輸出檔案路徑 2
-	outputFilePath = os.path.join(outFileDirPath, 'output2.txt')
-	#寫檔
-	WriteFile(outputFilePath,'output test')
-	
-	#拼接 輸出檔案路徑 3
-	outputFilePath = os.path.join(outFileDirPath, 'output3.txt')
-	#寫檔
-	WriteFile(outputFilePath,'出力テスト')
-	
-	#拼接 輸出檔案路徑 4
-	outputFilePath = os.path.join(outFileDirPath, 'output4.txt')
-	#寫檔
-	WriteFile(outputFilePath,'ovuvuevuevue enyetuenwuevue ugbemugbem osas')
-		
-		
-#寫檔示範
-def WriteFile(outputFilePath,text):
-	#寫檔
-	with open(outputFilePath, 'x') as f:
-		f.write(text)
+	#   /usr/src/app/output/abcd-0000-0000-0001/output1.png
+	#   /usr/src/app/output/abcd-0000-0000-0001/output2.png
+	#   /usr/src/app/output/abcd-0000-0000-0001/output3.png
+	#   /usr/src/app/output/abcd-0000-0000-0001/output4.png	
+	shutil.copyfile('./sampleFile/output1.png', os.path.join(outFileDirPath, 'output1.png'))
+	shutil.copyfile('./sampleFile/output2.png', os.path.join(outFileDirPath, 'output2.png'))
+	shutil.copyfile('./sampleFile/output3.png', os.path.join(outFileDirPath, 'output3.png'))
+	shutil.copyfile('./sampleFile/output4.png', os.path.join(outFileDirPath, 'output4.png'))
+
 	
 

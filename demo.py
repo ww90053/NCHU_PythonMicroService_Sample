@@ -39,6 +39,7 @@ def exec(inputFileDirPath,outFileDirPath):
 	shutil.copyfile('./sampleFile/output2.png', os.path.join(outFileDirPath, 'output2.png'))
 	shutil.copyfile('./sampleFile/output3.png', os.path.join(outFileDirPath, 'output3.png'))
 	shutil.copyfile('./sampleFile/output4.png', os.path.join(outFileDirPath, 'output4.png'))
+	
 
 	#執行成功,回傳True
 	return True

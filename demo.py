@@ -40,5 +40,9 @@ def exec(inputFileDirPath,outFileDirPath):
 	shutil.copyfile('./sampleFile/output3.png', os.path.join(outFileDirPath, 'output3.png'))
 	shutil.copyfile('./sampleFile/output4.png', os.path.join(outFileDirPath, 'output4.png'))
 
-	
-
+	#執行成功,回傳True
+	return True
+    
+	#如果執行失敗則回傳False,錯誤訊息用print的方式呈現
+	#print(f'這邊輸入錯誤訊息')
+	#return False

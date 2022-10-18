@@ -85,6 +85,10 @@
 ### Container封裝說明
 	因為自動化佈署需要,ReposityName與TagName需要命名在匯出檔案上
 	且dockerhub帳號的部分需要固定使用iscom70598966
+	注意：
+	1.在那之前，需要先決定您的程式代號(ReposityName)以及版本號(TagName)。這是用來識別彼此之間不同的程式用，若與他人重複將會有問題
+	2.程式代號(ReposityName)以及版本號(TagName)請用英數字，請勿使用特殊符號，「_」底線符號也不行，以免影響後續動作
+
 #### 封裝指令
 	格式 sudo docker build . -t iscom70598966/{ReposityName}:{TagName}
 	範例 sudo docker build . -t iscom70598966/allentest:v1

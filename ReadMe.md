@@ -94,4 +94,4 @@
 	範例 sudo docker build . -t iscom70598966/allentest:v1
 #### 匯出封裝檔案
 	格式 sudo docker save -o iscom70598966_{ReposityName}_{TagName} iscom70598966/{ReposityName}:{TagName}
-	範例 sudo docker save -o iscom70598966_allentest_v1 iscom70598966/allentest:v1
+	範例 sudo docker save -o iscom70598966_allentest_v1.tar iscom70598966/allentest:v1
